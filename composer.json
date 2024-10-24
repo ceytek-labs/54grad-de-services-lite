@@ -1,0 +1,20 @@
+{
+    "name": "ceytek-labs/54grad-de-services-lite",
+    "description": "54grad.de services lite",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "CeytekLabs\\FiftyFourGradDeServicesLite\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "ceyhun-celik",
+            "email": "ceyhuniverse@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^7.0"
+    }
+}
