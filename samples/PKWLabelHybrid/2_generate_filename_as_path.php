@@ -3,7 +3,7 @@
 use CeytekLabs\FiftyFourGradDeServicesLite\EnVKV\PKWLabelHybrid;
 
 $pkwLabelFullFilename = PKWLabelHybrid::make('<your-api-key>')
-    ->setMake('Škoda')
+    ->setManufacturer('Škoda')
     ->setModel('Octavia Combi RS')
     ->setFuel('benzin')
     ->setWeightedConsumption(4)

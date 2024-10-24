@@ -7,7 +7,7 @@ class PKWLabelFuel
     private $api = 'https://api.pkwlabel.com/v1/pkwlabel/fuel';
     private $key;
 
-    private $make;
+    private $manufacturer;
     private $model;
     private $fuel;
     private $consumption;
@@ -35,9 +35,9 @@ class PKWLabelFuel
         return $instance;
     }
 
-    public function setMake(string $make): self
+    public function setManufacturer(string $manufacturer): self
     {
-        $this->make = $make;
+        $this->manufacturer = $manufacturer;
 
         return $this;
     }
@@ -127,11 +127,11 @@ class PKWLabelFuel
     {
         $fields = [];
 
-        if (!isset($this->make)) {
+        if (!isset($this->manufacturer)) {
             throw new \Exception('Please set your make');
         }
 
-        $fields['make'] = $this->make;
+        $fields['make'] = $this->manufacturer;
 
         if (!isset($this->model)) {
             throw new \Exception('Please set your model');
@@ -181,7 +181,7 @@ class PKWLabelFuel
             CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
             CURLOPT_CUSTOMREQUEST => 'POST',
             CURLOPT_POSTFIELDS => json_encode([
-                'make' => $this->make,
+                'make' => $this->manufacturer,
                 'model' => $this->model,
                 'fuel' => $this->fuel,
                 'consumption' => $this->consumption,

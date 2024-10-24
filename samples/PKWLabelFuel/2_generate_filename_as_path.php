@@ -3,7 +3,7 @@
 use CeytekLabs\FiftyFourGradDeServicesLite\EnVKV\PKWLabelFuel;
 
 $pkwLabelFullFilename = PKWLabelFuel::make('<your-api-key>')
-    ->setMake('Škoda')
+    ->setManufacturer('Škoda')
     ->setModel('Octavia Combi RS')
     ->setFuel('diesel')
     ->setConsumption(8.5)

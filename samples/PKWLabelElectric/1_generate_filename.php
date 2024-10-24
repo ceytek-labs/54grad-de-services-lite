@@ -3,7 +3,7 @@
 use CeytekLabs\FiftyFourGradDeServicesLite\EnVKV\PKWLabelElectric;
 
 $pkwLabelFilename = PKWLabelElectric::make('<your-api-key>')
-    ->setMake('Škoda')
+    ->setManufacturer('Škoda')
     ->setModel('Octavia Combi RS')
     ->setElectricConsumption(15)
     ->setElectricConsumptionCity(16.3)

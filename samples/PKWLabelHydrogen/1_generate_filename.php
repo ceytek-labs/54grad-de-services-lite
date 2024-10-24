@@ -3,7 +3,7 @@
 use CeytekLabs\FiftyFourGradDeServicesLite\EnVKV\PKWLabelHydrogen;
 
 $pkwLabelFilename = PKWLabelHydrogen::make('<your-api-key>')
-    ->setMake('Škoda')
+    ->setManufacturer('Škoda')
     ->setModel('Octavia Combi RS')
     ->setConsumption('8.5')
     ->setConsumptionCity('9.3')
