@@ -64,112 +64,112 @@ class PKWLabelHybrid
         return $this;
     }
 
-    public function setWeightedConsumption(int $weightedConsumption): self
+    public function setWeightedConsumption(string $weightedConsumption): self
     {
         $this->weightedConsumption = $weightedConsumption;
         
         return $this;
     }
 
-    public function setElectricWeightedConsumption(int $electricWeightedConsumption): self
+    public function setElectricWeightedConsumption(string $electricWeightedConsumption): self
     {
         $this->electricWeightedConsumption = $electricWeightedConsumption;
         
         return $this;
     }
 
-    public function setConsumption(float $consumption): self
+    public function setConsumption(string $consumption): self
     {
         $this->consumption = $consumption;
         
         return $this;
     }
 
-    public function setConsumptionCity(float $consumptionCity): self
+    public function setConsumptionCity(string $consumptionCity): self
     {
         $this->consumptionCity = $consumptionCity;
         
         return $this;
     }
 
-    public function setConsumptionSuburban(float $consumptionSuburban): self
+    public function setConsumptionSuburban(string $consumptionSuburban): self
     {
         $this->consumptionSuburban = $consumptionSuburban;
         
         return $this;
     }
 
-    public function setConsumptionRural(float $consumptionRural): self
+    public function setConsumptionRural(string $consumptionRural): self
     {
         $this->consumptionRural = $consumptionRural;
         
         return $this;
     }
 
-    public function setConsumptionHighway(float $consumptionHighway): self
+    public function setConsumptionHighway(string $consumptionHighway): self
     {
         $this->consumptionHighway = $consumptionHighway;
         
         return $this;
     }
 
-    public function setElectricConsumption(float $electricConsumption): self
+    public function setElectricConsumption(string $electricConsumption): self
     {
         $this->electricConsumption = $electricConsumption;
         
         return $this;
     }
 
-    public function setElectricConsumptionCity(float $electricConsumptionCity): self
+    public function setElectricConsumptionCity(string $electricConsumptionCity): self
     {
         $this->electricConsumptionCity = $electricConsumptionCity;
         
         return $this;
     }
 
-    public function setElectricConsumptionSuburban(float $electricConsumptionSuburban): self
+    public function setElectricConsumptionSuburban(string $electricConsumptionSuburban): self
     {
         $this->electricConsumptionSuburban = $electricConsumptionSuburban;
         
         return $this;
     }
 
-    public function setElectricConsumptionRural(float $electricConsumptionRural): self
+    public function setElectricConsumptionRural(string $electricConsumptionRural): self
     {
         $this->electricConsumptionRural = $electricConsumptionRural;
         
         return $this;
     }
 
-    public function setElectricConsumptionHighway(float $electricConsumptionHighway): self
+    public function setElectricConsumptionHighway(string $electricConsumptionHighway): self
     {
         $this->electricConsumptionHighway = $electricConsumptionHighway;
         
         return $this;
     }
 
-    public function setCo2Combined(int $co2Combined): self
+    public function setCo2Combined(string $co2Combined): self
     {
         $this->co2Combined = $co2Combined;
         
         return $this;
     }
 
-    public function setCo2Discharged(int $co2Discharged): self
+    public function setCo2Discharged(string $co2Discharged): self
     {
         $this->co2Discharged = $co2Discharged;
         
         return $this;
     }
 
-    public function setCubicCapacity(int $cubicCapacity): self
+    public function setCubicCapacity(string $cubicCapacity): self
     {
         $this->cubicCapacity = $cubicCapacity;
         
         return $this;
     }
 
-    public function setRangeEaer(int $rangeEaer): self
+    public function setRangeEaer(string $rangeEaer): self
     {
         $this->rangeEaer = $rangeEaer;
         
