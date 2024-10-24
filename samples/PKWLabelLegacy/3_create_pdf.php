@@ -1,8 +1,8 @@
 <?php
 
-use CeytekLabs\FiftyFourGradDeServicesLite\EnVKV\LegacyPKWLabel;
+use CeytekLabs\FiftyFourGradDeServicesLite\EnVKV\PKWLabelLegacy;
 
-$pkwLabelFilename = LegacyPKWLabel::make('<your-api-key>')
+PKWLabelLegacy::make('<your-api-key>')
     ->setBrand('Skoda')
     ->setModel('Octavia III 1.9 TDI Elegance')
     ->setPower('84')
@@ -13,6 +13,5 @@ $pkwLabelFilename = LegacyPKWLabel::make('<your-api-key>')
     ->setConsumption('7.2')
     ->setConsumptionCity('n/a')
     ->setConsumptionHighway('n/a')
-    ->generateFilename();
-
-echo $pkwLabelFilename;
+    ->setOutputDirectory(__DIR__ . '/pdfs')
+    ->createPdf();

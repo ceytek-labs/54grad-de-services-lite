@@ -2,7 +2,7 @@
 
 namespace CeytekLabs\FiftyFourGradDeServicesLite\EnVKV;
 
-class LegacyPKWLabel
+class PKWLabelLegacy
 {
     private $api = 'https://envkv.54grad.de/api/pkwlabel';
     private $key;
