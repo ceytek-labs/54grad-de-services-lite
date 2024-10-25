@@ -196,7 +196,7 @@ class PKWLabelFuel
             CURLOPT_HTTPHEADER => [
                 'Content-Type: application/json',
                 'Accept: application/json',
-                'Authorization' => 'Bearer '.$this->key
+                "Authorization: Bearer {$this->key}",
             ],
         ]);
 
