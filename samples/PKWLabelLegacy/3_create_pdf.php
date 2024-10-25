@@ -1,8 +1,8 @@
 <?php
 
-use CeytekLabs\FiftyFourGradDeServicesLite\EnVKV\PKWLabelLegacy;
+use CeytekLabs\FiftyFourGradDeServicesLite\EnVKV\PKWLabelOutdated;
 
-PKWLabelLegacy::make('<your-api-key>')
+PKWLabelOutdated::make('<your-api-key>')
     ->setBrand('Skoda')
     ->setModel('Octavia III 1.9 TDI Elegance')
     ->setPower('84')
