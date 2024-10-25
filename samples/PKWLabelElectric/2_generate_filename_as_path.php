@@ -12,7 +12,7 @@ $pkwLabelFilenameAsPath = PKWLabelElectric::make('<your-api-key>')
     ->setElectricConsumptionHighway(14)
     ->setRange(350)
     ->setFin('1234567891011')
-    ->setOutputDirectory(__DIR__ . '/pdfs') // set output directory
+    ->setOutputDirectory(__DIR__ . '/pdfs')
     ->generateFullFilename();
 
 echo $pkwLabelFilenameAsPath;

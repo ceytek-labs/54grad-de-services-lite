@@ -13,7 +13,7 @@ $pkwLabelFilenameAsPath = PKWLabelOutdated::make('<your-api-key>')
     ->setConsumption('7.2')
     ->setConsumptionCity('n/a')
     ->setConsumptionHighway('n/a')
-    ->setOutputDirectory(__DIR__ . '/pdfs') // set output directory
+    ->setOutputDirectory(__DIR__ . '/pdfs')
     ->generateFullFilename();
 
 echo $pkwLabelFilenameAsPath;

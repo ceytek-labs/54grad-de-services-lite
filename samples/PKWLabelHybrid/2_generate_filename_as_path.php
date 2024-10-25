@@ -23,7 +23,7 @@ $pkwLabelFullFilename = PKWLabelHybrid::make('<your-api-key>')
     ->setCubicCapacity(1987)
     ->setRangeEaer(350)
     ->setFin('1234567891011')
-    ->setOutputDirectory(__DIR__ . '/pdfs') // Output directory belirleniyor
+    ->setOutputDirectory(__DIR__ . '/pdfs')
     ->generateFullFilename();
 
 echo $pkwLabelFullFilename;
