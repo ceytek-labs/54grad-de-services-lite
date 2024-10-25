@@ -20,6 +20,8 @@
 
 This package is designed to integrate the services provided by **54grad.de** into PHP projects, allowing for seamless use of vehicle labeling data and other related functionalities within a PHP-based environment.
 
+> **Disclaimer:** This package is not an official product of 54grad.de. The developers accept no responsibility for any issues, discrepancies, or damages that may arise from its use.
+
 ## Installation
 
 You can add this package to your projects via Composer:
