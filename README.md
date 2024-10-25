@@ -1,4 +1,5 @@
 <p align="center">
+    <img src="https://raw.githubusercontent.com/ceytek-labs/54grad-de-services-lite/main/art/banner.png" width="600" alt="54grad.de Services Lite">
     <a href="https://packagist.org/packages/ceytek-labs/54grad-de-services-lite">
         <img alt="Total Downloads" src="https://img.shields.io/packagist/dt/ceytek-labs/54grad-de-services-lite">
     </a>
