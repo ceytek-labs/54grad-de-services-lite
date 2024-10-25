@@ -8,8 +8,8 @@
         "energy labels",
         "car labels",
         "envkv",
-        "pwk",
-        "pwk label"
+        "pkw",
+        "pkw label"
     ],
     "homepage": "https://github.com/ceytek-labs/54grad-de-services-lite",
     "type": "library",
