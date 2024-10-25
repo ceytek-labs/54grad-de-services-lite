@@ -246,7 +246,7 @@ class PKWLabelLegacy
         }
 
         if (!file_exists($this->filename)) {
-            throw new \Exception('PDF file not found. You must call generatePdf() first.');
+            throw new \Exception('PDF file not found. You must call createPdf() first.');
         }
 
         header('Content-Type: application/pdf');
