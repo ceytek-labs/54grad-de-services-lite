@@ -53,7 +53,7 @@ In essence, it streamlines the creation of these labels, reducing manual work an
 
 ## PKW Label Electric
 
-The **PKW Label Electric** API allows users to generate energy labels for electric vehicles, including key information such as electric consumption, driving range, and vehicle identification numbers (FIN). It automates the process of creating legally required labels under the EnVKV (German Energy Consumption Labeling Ordinance), making it easier for dealerships and vehicle manufacturers to comply with regulations.
+The **PKW Label Electric** allows users to generate energy labels for electric vehicles, including key information such as electric consumption, driving range, and vehicle identification numbers (FIN). It automates the process of creating legally required labels under the EnVKV (German Energy Consumption Labeling Ordinance), making it easier for dealerships and vehicle manufacturers to comply with regulations.
 
 ### Example Usage
 
@@ -205,7 +205,7 @@ PKWLabelElectric::make('<your-api-key>')
 
 ## PKW Label Fuel
 
-The **PKW Label Fuel** API is designed to automate the creation of energy labels for fuel-powered vehicles. This API supports the generation of standardized labels that display essential vehicle details, such as fuel consumption, CO2 emissions, and engine capacity. The labels created by this API comply with the EnVKV (German Energy Consumption Labeling Ordinance), making it easier for car dealerships and manufacturers to meet regulatory requirements.
+The **PKW Label Fuel** is designed to automate the creation of energy labels for fuel-powered vehicles. This API supports the generation of standardized labels that display essential vehicle details, such as fuel consumption, CO2 emissions, and engine capacity. The labels created by this API comply with the EnVKV (German Energy Consumption Labeling Ordinance), making it easier for car dealerships and manufacturers to meet regulatory requirements.
 
 By automating the generation of these labels, the API reduces manual effort and ensures accuracy for fuel-powered vehicles.
 
@@ -371,13 +371,13 @@ PKWLabelFuel::make('<your-api-key>')
 
 ## PKW Label Hybrid
 
-The **PKW Label Hybrid** API allows for automated generation of energy labels for hybrid vehicles. It provides comprehensive details, including fuel consumption, electric consumption, CO2 emissions, and driving range. The generated labels meet the requirements set by the EnVKV (German Energy Consumption Labeling Ordinance), making it easier for car dealerships and manufacturers to comply with regulatory standards.
+The **PKW Label Hybrid** allows for automated generation of energy labels for hybrid vehicles. It provides comprehensive details, including fuel consumption, electric consumption, CO2 emissions, and driving range. The generated labels meet the requirements set by the EnVKV (German Energy Consumption Labeling Ordinance), making it easier for car dealerships and manufacturers to comply with regulatory standards.
 
 This API reduces the need for manual label creation, ensuring accuracy and consistency for hybrid vehicle data.
 
 ### Example Usage
 
-Here are a few examples of how you can use the **PKWLabelFuel** class in your PHP projects to generate and display electric vehicle labels.
+Here are a few examples of how you can use the **PKWLabelHybrid** class in your PHP projects to generate and display electric vehicle labels.
 
 **[⬆ Back to services](#services)**
 
@@ -591,13 +591,13 @@ PKWLabelHybrid::make('<your-api-key>')
 
 ## PKW Label Hydrogen
 
-The **PKW Label Hydrogen** API enables the automatic creation of energy labels for hydrogen-powered vehicles. This API is designed to provide critical information, including fuel consumption across various driving conditions (such as city, suburban, rural, and highway), along with other essential details like vehicle identification (FIN). This labeling functionality is tailored to meet the EnVKV (German Energy Consumption Labeling Ordinance) requirements, simplifying regulatory compliance for dealerships and vehicle manufacturers.
+The **PKW Label Hydrogen** enables the automatic creation of energy labels for hydrogen-powered vehicles. This API is designed to provide critical information, including fuel consumption across various driving conditions (such as city, suburban, rural, and highway), along with other essential details like vehicle identification (FIN). This labeling functionality is tailored to meet the EnVKV (German Energy Consumption Labeling Ordinance) requirements, simplifying regulatory compliance for dealerships and vehicle manufacturers.
 
 This tool allows you to efficiently create accurate and standardized labels for hydrogen vehicles with minimal manual intervention.
 
 ### Example Usage
 
-Here are a few examples of how you can use the **PKWLabelFuel** class in your PHP projects to generate and display electric vehicle labels.
+Here are a few examples of how you can use the **PKWLabelHydrogen** class in your PHP projects to generate and display electric vehicle labels.
 
 **[⬆ Back to services](#services)**
 
@@ -731,6 +731,166 @@ PKWLabelHydrogen::make('<your-api-key>')
     ->setConsumptionRural('8')
     ->setConsumptionHighway('7.2')
     ->setFin('1234567891011')
+    ->setOutputDirectory(__DIR__ . '/pdfs')
+    ->ensurePdfAndPrint();
+```
+
+**[⬆ Back to services](#services)**
+
+## PKW Label Outdated
+
+> The European Union updated its energy label system on March 1, 2021, moving from the complex A+, A++, and A+++ ratings to a simpler A-to-G scale. This change aimed to make energy efficiency classifications clearer for consumers, aligning with the EU's sustainability and transparency goals. The new scale improves the understanding of energy consumption and supports the transition to greener technologies by promoting clarity for both consumers and manufacturers.
+
+The **PKW Label Outdated** enables the generation of vehicle labels based on the former EU energy classification system, including ratings like A+, A++, and A+++. This class is intended for projects that still require these legacy labels, providing compatibility with the older EU scale where applicable.
+
+### Example Usage
+
+Here are a few examples of how you can use the **PKWLabelOutdated** class in your PHP projects to generate and display electric vehicle labels.
+
+**[⬆ Back to services](#services)**
+
+#### 1. Generate Filename
+
+This example generates the filename for the PDF without creating the actual file:
+
+```php
+use CeytekLabs\FiftyFourGradDeServicesLite\EnVKV\PKWLabelOutdated;
+
+$pkwLabelFilename = PKWLabelOutdated::make('<your-api-key>')
+    ->setBrand('Skoda')
+    ->setModel('Octavia III 1.9 TDI Elegance')
+    ->setPower('84')
+    ->setFuelType('supere10')
+    ->setMass('1484')
+    ->setCo2Emission('148')
+    ->setEngineCapacity('1998')
+    ->setConsumption('7.2')
+    ->setConsumptionCity('n/a')
+    ->setConsumptionHighway('n/a')
+    ->generateFilename();
+
+echo $pkwLabelFilename;
+```
+
+**[⬆ Back to services](#services)**
+
+#### 2. Generate Filename with Path
+
+If you want to include the output directory in the filename:
+
+```php
+use CeytekLabs\FiftyFourGradDeServicesLite\EnVKV\PKWLabelOutdated;
+
+$pkwLabelFilenameAsPath = PKWLabelOutdated::make('<your-api-key>')
+    ->setBrand('Skoda')
+    ->setModel('Octavia III 1.9 TDI Elegance')
+    ->setPower('84')
+    ->setFuelType('supere10')
+    ->setMass('1484')
+    ->setCo2Emission('148')
+    ->setEngineCapacity('1998')
+    ->setConsumption('7.2')
+    ->setConsumptionCity('n/a')
+    ->setConsumptionHighway('n/a')
+    ->setOutputDirectory(__DIR__ . '/pdfs')
+    ->generateFullFilename();
+
+echo $pkwLabelFilenameAsPath;
+```
+
+**[⬆ Back to services](#services)**
+
+#### 3. Create PDF
+
+This example shows how to create the PDF and save it to the output directory:
+
+```php
+use CeytekLabs\FiftyFourGradDeServicesLite\EnVKV\PKWLabelOutdated;
+
+PKWLabelOutdated::make('<your-api-key>')
+    ->setBrand('Skoda')
+    ->setModel('Octavia III 1.9 TDI Elegance')
+    ->setPower('84')
+    ->setFuelType('supere10')
+    ->setMass('1484')
+    ->setCo2Emission('148')
+    ->setEngineCapacity('1998')
+    ->setConsumption('7.2')
+    ->setConsumptionCity('n/a')
+    ->setConsumptionHighway('n/a')
+    ->setOutputDirectory(__DIR__ . '/pdfs')
+    ->createPdf();
+```
+
+**[⬆ Back to services](#services)**
+
+#### 4. Create and Display PDF
+
+This example creates the PDF and displays it directly in the browser:
+
+```php
+use CeytekLabs\FiftyFourGradDeServicesLite\EnVKV\PKWLabelOutdated;
+
+PKWLabelOutdated::make('<your-api-key>')
+    ->setBrand('Skoda')
+    ->setModel('Octavia III 1.9 TDI Elegance')
+    ->setPower('84')
+    ->setFuelType('supere10')
+    ->setMass('1484')
+    ->setCo2Emission('148')
+    ->setEngineCapacity('1998')
+    ->setConsumption('7.2')
+    ->setConsumptionCity('n/a')
+    ->setConsumptionHighway('n/a')
+    ->setOutputDirectory(__DIR__ . '/pdfs')
+    ->createPdf()
+    ->displayPdf();
+```
+
+**[⬆ Back to services](#services)**
+
+#### 5. Display Already Created PDF
+
+If the PDF is already created, you can directly display it:
+
+```php
+use CeytekLabs\FiftyFourGradDeServicesLite\EnVKV\PKWLabelOutdated;
+
+PKWLabelOutdated::make('<your-api-key>')
+    ->setBrand('Skoda')
+    ->setModel('Octavia III 1.9 TDI Elegance')
+    ->setPower('84')
+    ->setFuelType('supere10')
+    ->setMass('1484')
+    ->setCo2Emission('148')
+    ->setEngineCapacity('1998')
+    ->setConsumption('7.2')
+    ->setConsumptionCity('n/a')
+    ->setConsumptionHighway('n/a')
+    ->setOutputDirectory(__DIR__ . '/pdfs')
+    ->displayPdf();
+```
+
+**[⬆ Back to services](#services)**
+
+#### 6. Ensure PDF Exists and Print
+
+This function checks if the PDF already exists. If not, it generates the PDF and displays it:
+
+```php
+use CeytekLabs\FiftyFourGradDeServicesLite\EnVKV\PKWLabelOutdated;
+
+PKWLabelOutdated::make('<your-api-key>')
+    ->setBrand('Skoda')
+    ->setModel('Octavia III 1.9 TDI Elegance')
+    ->setPower('84')
+    ->setFuelType('supere10')
+    ->setMass('1484')
+    ->setCo2Emission('148')
+    ->setEngineCapacity('1998')
+    ->setConsumption('7.2')
+    ->setConsumptionCity('n/a')
+    ->setConsumptionHighway('n/a')
     ->setOutputDirectory(__DIR__ . '/pdfs')
     ->ensurePdfAndPrint();
 ```
