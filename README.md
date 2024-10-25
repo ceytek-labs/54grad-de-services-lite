@@ -1,18 +1,10 @@
 <p align="center">
     <img src="https://raw.githubusercontent.com/ceytek-labs/54grad-de-services-lite/refs/heads/1.x/art/banner.png" width="400" alt="54grad.de Services Lite">
     <p align="center">
-        <a href="https://packagist.org/packages/ceytek-labs/54grad-de-services-lite">
-            <img alt="Total Downloads" src="https://img.shields.io/packagist/dt/ceytek-labs/54grad-de-services-lite">
-        </a>
-        <a href="https://packagist.org/packages/ceytek-labs/54grad-de-services-lite">
-            <img alt="Latest Version" src="https://img.shields.io/packagist/v/ceytek-labs/54grad-de-services-lite">
-        </a>
-        <a href="https://packagist.org/packages/ceytek-labs/54grad-de-services-lite">
-            <img alt="Size" src="https://img.shields.io/github/repo-size/ceytek-labs/54grad-de-services-lite">
-        </a>
-        <a href="https://packagist.org/packages/ceytek-labs/54grad-de-services-lite">
-            <img alt="License" src="https://img.shields.io/packagist/l/ceytek-labs/54grad-de-services-lite">
-        </a>
+        <a href="https://packagist.org/packages/ceytek-labs/54grad-de-services-lite"><img alt="Total Downloads" src="https://img.shields.io/packagist/dt/ceytek-labs/54grad-de-services-lite"></a>
+        <a href="https://packagist.org/packages/ceytek-labs/54grad-de-services-lite"><img alt="Latest Version" src="https://img.shields.io/packagist/v/ceytek-labs/54grad-de-services-lite"></a>
+        <a href="https://packagist.org/packages/ceytek-labs/54grad-de-services-lite"><img alt="Size" src="https://img.shields.io/github/repo-size/ceytek-labs/54grad-de-services-lite"></a>
+        <a href="https://packagist.org/packages/ceytek-labs/54grad-de-services-lite"><img alt="License" src="https://img.shields.io/packagist/l/ceytek-labs/54grad-de-services-lite"></a>
     </p>
 </p>
 
