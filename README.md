@@ -53,7 +53,7 @@ In essence, it streamlines the creation of these labels, reducing manual work an
 
 ## PKW Label Electric
 
-**The PKW Label Electric API** allows users to generate energy labels for electric vehicles, including key information such as electric consumption, driving range, and vehicle identification numbers (FIN). It automates the process of creating legally required labels under the EnVKV (German Energy Consumption Labeling Ordinance), making it easier for dealerships and vehicle manufacturers to comply with regulations.
+The **PKW Label Electric** API allows users to generate energy labels for electric vehicles, including key information such as electric consumption, driving range, and vehicle identification numbers (FIN). It automates the process of creating legally required labels under the EnVKV (German Energy Consumption Labeling Ordinance), making it easier for dealerships and vehicle manufacturers to comply with regulations.
 
 ### Example Usage
 
@@ -196,6 +196,172 @@ PKWLabelElectric::make('<your-api-key>')
     ->setElectricConsumptionRural('14.2')
     ->setElectricConsumptionHighway('14')
     ->setRange('350')
+    ->setFin('1234567891011')
+    ->setOutputDirectory(__DIR__ . '/pdfs')
+    ->ensurePdfAndPrint();
+```
+
+**[⬆ Back to services](#services)**
+
+## PKW Label Fuel
+
+The **PKW Label Fuel** API is designed to automate the creation of energy labels for fuel-powered vehicles. This API supports the generation of standardized labels that display essential vehicle details, such as fuel consumption, CO2 emissions, and engine capacity. The labels created by this API comply with the EnVKV (German Energy Consumption Labeling Ordinance), making it easier for car dealerships and manufacturers to meet regulatory requirements.
+
+By automating the generation of these labels, the API reduces manual effort and ensures accuracy for fuel-powered vehicles.
+
+### Example Usage
+
+Here are a few examples of how you can use the **PKWLabelFuel** class in your PHP projects to generate and display electric vehicle labels.
+
+**[⬆ Back to services](#services)**
+
+#### 1. Generate Filename
+
+This example generates the filename for the PDF without creating the actual file:
+
+```php
+use CeytekLabs\FiftyFourGradDeServicesLite\EnVKV\PKWLabelFuel;
+
+$pkwLabelFilename = PKWLabelFuel::make('<your-api-key>')
+    ->setManufacturer('Škoda')
+    ->setModel('Octavia Combi RS')
+    ->setFuel('diesel')
+    ->setConsumption(8.5)
+    ->setConsumptionCity(9.3)
+    ->setConsumptionSuburban(8.9)
+    ->setConsumptionRural(8)
+    ->setConsumptionHighway(7.2)
+    ->setCo2Combined(136)
+    ->setCubicCapacity(1997)
+    ->setFin('1234567891011')
+    ->generateFilename();
+
+echo $pkwLabelFilename;
+```
+
+**[⬆ Back to services](#services)**
+
+#### 2. Generate Filename with Path
+
+If you want to include the output directory in the filename:
+
+```php
+use CeytekLabs\FiftyFourGradDeServicesLite\EnVKV\PKWLabelFuel;
+
+$pkwLabelFullFilename = PKWLabelFuel::make('<your-api-key>')
+    ->setManufacturer('Škoda')
+    ->setModel('Octavia Combi RS')
+    ->setFuel('diesel')
+    ->setConsumption(8.5)
+    ->setConsumptionCity(9.3)
+    ->setConsumptionSuburban(8.9)
+    ->setConsumptionRural(8)
+    ->setConsumptionHighway(7.2)
+    ->setCo2Combined(136)
+    ->setCubicCapacity(1997)
+    ->setFin('1234567891011')
+    ->setOutputDirectory(__DIR__ . '/pdfs')
+    ->generateFullFilename();
+
+echo $pkwLabelFullFilename;
+```
+
+**[⬆ Back to services](#services)**
+
+#### 3. Create PDF
+
+This example shows how to create the PDF and save it to the output directory:
+
+```php
+use CeytekLabs\FiftyFourGradDeServicesLite\EnVKV\PKWLabelFuel;
+
+PKWLabelFuel::make('<your-api-key>')
+    ->setManufacturer('Škoda')
+    ->setModel('Octavia Combi RS')
+    ->setFuel('diesel')
+    ->setConsumption(8.5)
+    ->setConsumptionCity(9.3)
+    ->setConsumptionSuburban(8.9)
+    ->setConsumptionRural(8)
+    ->setConsumptionHighway(7.2)
+    ->setCo2Combined(136)
+    ->setCubicCapacity(1997)
+    ->setFin('1234567891011')
+    ->setOutputDirectory(__DIR__ . '/pdfs')
+    ->createPdf();
+```
+
+**[⬆ Back to services](#services)**
+
+#### 4. Create and Display PDF
+
+This example creates the PDF and displays it directly in the browser:
+
+```php
+use CeytekLabs\FiftyFourGradDeServicesLite\EnVKV\PKWLabelFuel;
+
+PKWLabelFuel::make('<your-api-key>')
+    ->setManufacturer('Škoda')
+    ->setModel('Octavia Combi RS')
+    ->setFuel('diesel')
+    ->setConsumption(8.5)
+    ->setConsumptionCity(9.3)
+    ->setConsumptionSuburban(8.9)
+    ->setConsumptionRural(8)
+    ->setConsumptionHighway(7.2)
+    ->setCo2Combined(136)
+    ->setCubicCapacity(1997)
+    ->setFin('1234567891011')
+    ->setOutputDirectory(__DIR__ . '/pdfs')
+    ->createPdf()
+    ->displayPdf();
+```
+
+**[⬆ Back to services](#services)**
+
+#### 5. Display Already Created PDF
+
+If the PDF is already created, you can directly display it:
+
+```php
+use CeytekLabs\FiftyFourGradDeServicesLite\EnVKV\PKWLabelFuel;
+
+PKWLabelFuel::make('<your-api-key>')
+    ->setManufacturer('Škoda')
+    ->setModel('Octavia Combi RS')
+    ->setFuel('diesel')
+    ->setConsumption(8.5)
+    ->setConsumptionCity(9.3)
+    ->setConsumptionSuburban(8.9)
+    ->setConsumptionRural(8)
+    ->setConsumptionHighway(7.2)
+    ->setCo2Combined(136)
+    ->setCubicCapacity(1997)
+    ->setFin('1234567891011')
+    ->setOutputDirectory(__DIR__ . '/pdfs')
+    ->displayPdf();
+```
+
+**[⬆ Back to services](#services)**
+
+#### 6. Ensure PDF Exists and Print
+
+This function checks if the PDF already exists. If not, it generates the PDF and displays it:
+
+```php
+use CeytekLabs\FiftyFourGradDeServicesLite\EnVKV\PKWLabelFuel;
+
+PKWLabelFuel::make('<your-api-key>')
+    ->setManufacturer('Škoda')
+    ->setModel('Octavia Combi RS')
+    ->setFuel('diesel')
+    ->setConsumption(8.5)
+    ->setConsumptionCity(9.3)
+    ->setConsumptionSuburban(8.9)
+    ->setConsumptionRural(8)
+    ->setConsumptionHighway(7.2)
+    ->setCo2Combined(136)
+    ->setCubicCapacity(1997)
     ->setFin('1234567891011')
     ->setOutputDirectory(__DIR__ . '/pdfs')
     ->ensurePdfAndPrint();
