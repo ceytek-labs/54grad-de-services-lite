@@ -586,3 +586,151 @@ PKWLabelHybrid::make('<your-api-key>')
     ->setOutputDirectory(__DIR__ . '/pdfs')
     ->ensurePdfAndPrint();
 ```
+
+**[⬆ Back to services](#services)**
+
+## PKW Label Hydrogen
+
+The **PKW Label Hydrogen** API enables the automatic creation of energy labels for hydrogen-powered vehicles. This API is designed to provide critical information, including fuel consumption across various driving conditions (such as city, suburban, rural, and highway), along with other essential details like vehicle identification (FIN). This labeling functionality is tailored to meet the EnVKV (German Energy Consumption Labeling Ordinance) requirements, simplifying regulatory compliance for dealerships and vehicle manufacturers.
+
+This tool allows you to efficiently create accurate and standardized labels for hydrogen vehicles with minimal manual intervention.
+
+### Example Usage
+
+Here are a few examples of how you can use the **PKWLabelFuel** class in your PHP projects to generate and display electric vehicle labels.
+
+**[⬆ Back to services](#services)**
+
+#### 1. Generate Filename
+
+This example generates the filename for the PDF without creating the actual file:
+
+```php
+use CeytekLabs\FiftyFourGradDeServicesLite\EnVKV\PKWLabelHydrogen;
+
+$pkwLabelFilename = PKWLabelHydrogen::make('<your-api-key>')
+    ->setManufacturer('Škoda')
+    ->setModel('Octavia Combi RS')
+    ->setConsumption('8.5')
+    ->setConsumptionCity('9.3')
+    ->setConsumptionSuburban('8.9')
+    ->setConsumptionRural('8')
+    ->setConsumptionHighway('7.2')
+    ->setFin('1234567891011')
+    ->generateFilename();
+
+echo $pkwLabelFilename;
+```
+
+**[⬆ Back to services](#services)**
+
+#### 2. Generate Filename with Path
+
+If you want to include the output directory in the filename:
+
+```php
+use CeytekLabs\FiftyFourGradDeServicesLite\EnVKV\PKWLabelHydrogen;
+
+$pkwLabelFullFilename = PKWLabelHydrogen::make('<your-api-key>')
+    ->setManufacturer('Škoda')
+    ->setModel('Octavia Combi RS')
+    ->setConsumption('8.5')
+    ->setConsumptionCity('9.3')
+    ->setConsumptionSuburban('8.9')
+    ->setConsumptionRural('8')
+    ->setConsumptionHighway('7.2')
+    ->setFin('1234567891011')
+    ->setOutputDirectory(__DIR__ . '/pdfs')
+    ->generateFullFilename();
+
+echo $pkwLabelFullFilename;
+```
+
+**[⬆ Back to services](#services)**
+
+#### 3. Create PDF
+
+This example shows how to create the PDF and save it to the output directory:
+
+```php
+use CeytekLabs\FiftyFourGradDeServicesLite\EnVKV\PKWLabelHydrogen;
+
+PKWLabelHydrogen::make('<your-api-key>')
+    ->setManufacturer('Škoda')
+    ->setModel('Octavia Combi RS')
+    ->setConsumption('8.5')
+    ->setConsumptionCity('9.3')
+    ->setConsumptionSuburban('8.9')
+    ->setConsumptionRural('8')
+    ->setConsumptionHighway('7.2')
+    ->setFin('1234567891011')
+    ->setOutputDirectory(__DIR__ . '/pdfs')
+    ->createPdf();
+```
+
+**[⬆ Back to services](#services)**
+
+#### 4. Create and Display PDF
+
+This example creates the PDF and displays it directly in the browser:
+
+```php
+use CeytekLabs\FiftyFourGradDeServicesLite\EnVKV\PKWLabelHydrogen;
+
+PKWLabelHydrogen::make('<your-api-key>')
+    ->setManufacturer('Škoda')
+    ->setModel('Octavia Combi RS')
+    ->setConsumption('8.5')
+    ->setConsumptionCity('9.3')
+    ->setConsumptionSuburban('8.9')
+    ->setConsumptionRural('8')
+    ->setConsumptionHighway('7.2')
+    ->setFin('1234567891011')
+    ->setOutputDirectory(__DIR__ . '/pdfs')
+    ->createPdf()
+    ->displayPdf();
+```
+
+**[⬆ Back to services](#services)**
+
+#### 5. Display Already Created PDF
+
+If the PDF is already created, you can directly display it:
+
+```php
+use CeytekLabs\FiftyFourGradDeServicesLite\EnVKV\PKWLabelHydrogen;
+
+PKWLabelHydrogen::make('<your-api-key>')
+    ->setManufacturer('Škoda')
+    ->setModel('Octavia Combi RS')
+    ->setConsumption('8.5')
+    ->setConsumptionCity('9.3')
+    ->setConsumptionSuburban('8.9')
+    ->setConsumptionRural('8')
+    ->setConsumptionHighway('7.2')
+    ->setFin('1234567891011')
+    ->setOutputDirectory(__DIR__ . '/pdfs')
+    ->displayPdf();
+```
+
+**[⬆ Back to services](#services)**
+
+#### 6. Ensure PDF Exists and Print
+
+This function checks if the PDF already exists. If not, it generates the PDF and displays it:
+
+```php
+use CeytekLabs\FiftyFourGradDeServicesLite\EnVKV\PKWLabelHydrogen;
+
+PKWLabelHydrogen::make('<your-api-key>')
+    ->setManufacturer('Škoda')
+    ->setModel('Octavia Combi RS')
+    ->setConsumption('8.5')
+    ->setConsumptionCity('9.3')
+    ->setConsumptionSuburban('8.9')
+    ->setConsumptionRural('8')
+    ->setConsumptionHighway('7.2')
+    ->setFin('1234567891011')
+    ->setOutputDirectory(__DIR__ . '/pdfs')
+    ->ensurePdfAndPrint();
+```
