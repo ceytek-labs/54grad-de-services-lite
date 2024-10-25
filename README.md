@@ -13,6 +13,7 @@
     </a>
 </p>
 
+------
 
 # 54grad.de Services Lite
 
@@ -894,3 +895,11 @@ PKWLabelOutdated::make('<your-api-key>')
     ->setOutputDirectory(__DIR__ . '/pdfs')
     ->ensurePdfAndPrint();
 ```
+
+## Contributing
+
+Feel free to submit a **pull request** or report an issue. Any contributions and feedback are highly appreciated!
+
+## License
+
+This project is licensed under the MIT License.
