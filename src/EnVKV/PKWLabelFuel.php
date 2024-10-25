@@ -208,6 +208,12 @@ class PKWLabelFuel
 
         curl_close($curl);
 
+        $responseObject = json_decode($response);
+
+        if (isset($responseObject->errors)) {
+            throw new \Exception('API error: ' . $response);
+        }
+
         file_put_contents($this->filename, $response);
 
         return $this;
