@@ -1,20 +1,40 @@
 {
     "name": "ceytek-labs/54grad-de-services-lite",
-    "description": "54grad.de services lite",
+    "description": "A PHP library for integrating 54grad.de's vehicle labeling services.",
+    "keywords": [
+        "54grad.de",
+        "vehicle labeling",
+        "PHP",
+        "energy labels",
+        "car labels",
+        "envkv",
+        "pwk",
+        "pwk label"
+    ],
+    "homepage": "https://github.com/ceytek-labs/54grad-de-services-lite",
     "type": "library",
     "license": "MIT",
+    "authors": [
+        {
+            "name": "ceyhun-celik",
+            "email": "ceyhunbceliktr@gmail.com",
+            "role": "Developer"
+        }
+    ],
     "autoload": {
         "psr-4": {
             "CeytekLabs\\FiftyFourGradDeServicesLite\\": "src/"
         }
     },
-    "authors": [
-        {
-            "name": "ceyhun-celik",
-            "email": "ceyhuniverse@gmail.com"
-        }
-    ],
     "require": {
         "php": "^7.0"
+    },
+    "suggest": {
+        "ext-curl": "Allows sending HTTP requests to the 54grad.de API (required)",
+        "ext-json": "Allows encoding and decoding of JSON data"
+    },
+    "support": {
+        "issues": "https://github.com/ceytek-labs/54grad-de-services-lite/issues",
+        "source": "https://github.com/ceytek-labs/54grad-de-services-lite"
     }
 }

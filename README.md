@@ -41,7 +41,7 @@ composer require ceytek-labs/54grad-de-services-lite
 
 ## PKW Label
 
-The PKW Label API allows car dealerships to automate the calculation and generation of vehicle labels required by the EnVKV (German Energy Consumption Labeling Ordinance for Passenger Cars). This API is designed to simplify the process of creating standardized labels that display important vehicle information such as fuel consumption and CO2 emissions, ensuring compliance with regulatory standards.
+The PKW Label allows car dealerships to automate the calculation and generation of vehicle labels required by the EnVKV (German Energy Consumption Labeling Ordinance for Passenger Cars). This API is designed to simplify the process of creating standardized labels that display important vehicle information such as fuel consumption and CO2 emissions, ensuring compliance with regulatory standards.
 
 In essence, it streamlines the creation of these labels, reducing manual work and ensuring accuracy.
 
