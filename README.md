@@ -18,6 +18,10 @@ This package is designed to integrate the services provided by **54grad.de** int
 
 > **Disclaimer:** This package is not an official product of 54grad.de. The developers accept no responsibility for any issues, discrepancies, or damages that may arise from its use.
 
+## Requirements
+
+- PHP 7.0 or higher
+
 ## Installation
 
 You can add this package to your projects via Composer:
@@ -25,10 +29,6 @@ You can add this package to your projects via Composer:
 ```bash
 composer require ceytek-labs/54grad-de-services-lite
 ```
-
-## Requirements
-
-- PHP 7.0 or higher
 
 ## Services
 
