@@ -753,7 +753,7 @@ This example generates the filename for the PDF without creating the actual file
 use CeytekLabs\FiftyFourGradDeServicesLite\EnVKV\PKWLabelOutdated;
 
 $pkwLabelFilename = PKWLabelOutdated::make('<your-api-key>')
-    ->setBrand('Skoda')
+    ->setManufacturer('Skoda')
     ->setModel('Octavia III 1.9 TDI Elegance')
     ->setPower('84')
     ->setFuelType('supere10')
@@ -778,7 +778,7 @@ If you want to include the output directory in the filename:
 use CeytekLabs\FiftyFourGradDeServicesLite\EnVKV\PKWLabelOutdated;
 
 $pkwLabelFilenameAsPath = PKWLabelOutdated::make('<your-api-key>')
-    ->setBrand('Skoda')
+    ->setManufacturer('Skoda')
     ->setModel('Octavia III 1.9 TDI Elegance')
     ->setPower('84')
     ->setFuelType('supere10')
@@ -804,7 +804,7 @@ This example shows how to create the PDF and save it to the output directory:
 use CeytekLabs\FiftyFourGradDeServicesLite\EnVKV\PKWLabelOutdated;
 
 PKWLabelOutdated::make('<your-api-key>')
-    ->setBrand('Skoda')
+    ->setManufacturer('Skoda')
     ->setModel('Octavia III 1.9 TDI Elegance')
     ->setPower('84')
     ->setFuelType('supere10')
@@ -828,7 +828,7 @@ This example creates the PDF and displays it directly in the browser:
 use CeytekLabs\FiftyFourGradDeServicesLite\EnVKV\PKWLabelOutdated;
 
 PKWLabelOutdated::make('<your-api-key>')
-    ->setBrand('Skoda')
+    ->setManufacturer('Skoda')
     ->setModel('Octavia III 1.9 TDI Elegance')
     ->setPower('84')
     ->setFuelType('supere10')
@@ -853,7 +853,7 @@ If the PDF is already created, you can directly display it:
 use CeytekLabs\FiftyFourGradDeServicesLite\EnVKV\PKWLabelOutdated;
 
 PKWLabelOutdated::make('<your-api-key>')
-    ->setBrand('Skoda')
+    ->setManufacturer('Skoda')
     ->setModel('Octavia III 1.9 TDI Elegance')
     ->setPower('84')
     ->setFuelType('supere10')
@@ -877,7 +877,7 @@ This function checks if the PDF already exists. If not, it generates the PDF and
 use CeytekLabs\FiftyFourGradDeServicesLite\EnVKV\PKWLabelOutdated;
 
 PKWLabelOutdated::make('<your-api-key>')
-    ->setBrand('Skoda')
+    ->setManufacturer('Skoda')
     ->setModel('Octavia III 1.9 TDI Elegance')
     ->setPower('84')
     ->setFuelType('supere10')

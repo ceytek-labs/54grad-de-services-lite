@@ -34,7 +34,7 @@ class PKWLabelOutdated
         return $instance;
     }
 
-    public function setBrand(string $brand): self
+    public function setManufacturer(string $brand): self
     {
         $this->brand = $brand;
 
