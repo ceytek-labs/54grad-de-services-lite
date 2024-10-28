@@ -20,7 +20,7 @@ This package is designed to integrate the services provided by **54grad.de** int
 
 ## Requirements
 
-- PHP 7.0 or higher
+- PHP 7.0 or higher (including PHP 8)
 
 ## Installation
 
