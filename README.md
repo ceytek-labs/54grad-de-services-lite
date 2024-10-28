@@ -34,10 +34,40 @@ composer require ceytek-labs/54grad-de-services-lite
 
 - [PKW Label](#pkw-label)
     - [PKW Label Electric](#pkw-label-electric)
+        - [Generate Filename](#pkw-label-electric-generate-filename)
+        - [Generate Filename with Path](#pkw-label-electric-generate-filename-with-path)
+        - [Create PDF](#pkw-label-electric-create-pdf)
+        - [Create and Display PDF](#pkw-label-electric-create-and-display-pdf)
+        - [Display Already Created PDF](#pkw-label-electric-display-already-created-pdf)
+        - [Ensure PDF Exists and Print](#pkw-label-electric-ensure-pdf-exists-and-print)
     - [PKW Label Fuel](#pkw-label-fuel)
+        - [Generate Filename](#pkw-label-fuel-generate-filename)
+        - [Generate Filename with Path](#pkw-label-fuel-generate-filename-with-path)
+        - [Create PDF](#pkw-label-fuel-create-pdf)
+        - [Create and Display PDF](#pkw-label-fuel-create-and-display-pdf)
+        - [Display Already Created PDF](#pkw-label-fuel-display-already-created-pdf)
+        - [Ensure PDF Exists and Print](#pkw-label-fuel-ensure-pdf-exists-and-print)
     - [PKW Label Hybrid](#pkw-label-hybrid)
+        - [Generate Filename](#pkw-label-hybrid-generate-filename)
+        - [Generate Filename with Path](#pkw-label-hybrid-generate-filename-with-path)
+        - [Create PDF](#pkw-label-hybrid-create-pdf)
+        - [Create and Display PDF](#pkw-label-hybrid-create-and-display-pdf)
+        - [Display Already Created PDF](#pkw-label-hybrid-display-already-created-pdf)
+        - [Ensure PDF Exists and Print](#pkw-label-hybrid-ensure-pdf-exists-and-print)
     - [PKW Label Hydrogen](#pkw-label-hydrogen)
+        - [Generate Filename](#pkw-label-hydrogen-generate-filename)
+        - [Generate Filename with Path](#pkw-label-hydrogen-generate-filename-with-path)
+        - [Create PDF](#pkw-label-hydrogen-create-pdf)
+        - [Create and Display PDF](#pkw-label-hydrogen-create-and-display-pdf)
+        - [Display Already Created PDF](#pkw-label-hydrogen-display-already-created-pdf)
+        - [Ensure PDF Exists and Print](#pkw-label-hydrogen-ensure-pdf-exists-and-print)
     - [PKW Label Outdated](#pkw-label-outdated)
+        - [Generate Filename](#pkw-label-outdated-generate-filename)
+        - [Generate Filename with Path](#pkw-label-outdated-generate-filename-with-path)
+        - [Create PDF](#pkw-label-outdated-create-pdf)
+        - [Create and Display PDF](#pkw-label-outdated-create-and-display-pdf)
+        - [Display Already Created PDF](#pkw-label-outdated-display-already-created-pdf)
+        - [Ensure PDF Exists and Print](#pkw-label-outdated-ensure-pdf-exists-and-print)
 
 ## PKW Label
 
@@ -57,7 +87,7 @@ Here are a few examples of how you can use the **PKWLabelElectric** class in you
 
 **[⬆ Back to services](#services)**
 
-#### 1. Generate Filename
+#### PKW Label Electric: Generate Filename
 
 This example generates the filename for the PDF without creating the actual file:
 
@@ -81,7 +111,7 @@ echo $pkwLabelFilename;
 
 **[⬆ Back to services](#services)**
 
-#### 2. Generate Filename with Path
+#### PKW Label Electric: Generate Filename with Path
 
 If you want to include the output directory in the filename:
 
@@ -106,7 +136,7 @@ echo $pkwLabelFilenameAsPath;
 
 **[⬆ Back to services](#services)**
 
-#### 3. Create PDF
+#### PKW Label Electric: Create PDF
 
 This example shows how to create the PDF and save it to the output directory:
 
@@ -129,7 +159,7 @@ PKWLabelElectric::make('<your-api-key>')
 
 **[⬆ Back to services](#services)**
 
-#### 4. Create and Display PDF
+#### PKW Label Electric: Create and Display PDF
 
 This example creates the PDF and displays it directly in the browser:
 
@@ -153,7 +183,7 @@ PKWLabelElectric::make('<your-api-key>')
 
 **[⬆ Back to services](#services)**
 
-#### 5. Display Already Created PDF
+#### PKW Label Electric: Display Already Created PDF
 
 If the PDF is already created, you can directly display it:
 
@@ -176,7 +206,7 @@ PKWLabelElectric::make('<your-api-key>')
 
 **[⬆ Back to services](#services)**
 
-#### 6. Ensure PDF Exists and Print
+#### PKW Label Electric: Ensure PDF Exists and Print
 
 This function checks if the PDF already exists. If not, it generates the PDF and displays it:
 
@@ -211,7 +241,7 @@ Here are a few examples of how you can use the **PKWLabelFuel** class in your PH
 
 **[⬆ Back to services](#services)**
 
-#### 1. Generate Filename
+#### PKW Label Fuel: Generate Filename
 
 This example generates the filename for the PDF without creating the actual file:
 
@@ -237,7 +267,7 @@ echo $pkwLabelFilename;
 
 **[⬆ Back to services](#services)**
 
-#### 2. Generate Filename with Path
+#### PKW Label Fuel: Generate Filename with Path
 
 If you want to include the output directory in the filename:
 
@@ -264,7 +294,7 @@ echo $pkwLabelFullFilename;
 
 **[⬆ Back to services](#services)**
 
-#### 3. Create PDF
+#### PKW Label Fuel: Create PDF
 
 This example shows how to create the PDF and save it to the output directory:
 
@@ -289,7 +319,7 @@ PKWLabelFuel::make('<your-api-key>')
 
 **[⬆ Back to services](#services)**
 
-#### 4. Create and Display PDF
+#### PKW Label Fuel: Create and Display PDF
 
 This example creates the PDF and displays it directly in the browser:
 
@@ -315,7 +345,7 @@ PKWLabelFuel::make('<your-api-key>')
 
 **[⬆ Back to services](#services)**
 
-#### 5. Display Already Created PDF
+#### PKW Label Fuel: Display Already Created PDF
 
 If the PDF is already created, you can directly display it:
 
@@ -340,7 +370,7 @@ PKWLabelFuel::make('<your-api-key>')
 
 **[⬆ Back to services](#services)**
 
-#### 6. Ensure PDF Exists and Print
+#### PKW Label Fuel: Ensure PDF Exists and Print
 
 This function checks if the PDF already exists. If not, it generates the PDF and displays it:
 
@@ -377,7 +407,7 @@ Here are a few examples of how you can use the **PKWLabelHybrid** class in your 
 
 **[⬆ Back to services](#services)**
 
-#### 1. Generate Filename
+#### PKW Label Hybrid: Generate Filename
 
 This example generates the filename for the PDF without creating the actual file:
 
@@ -412,7 +442,7 @@ echo $pkwLabelFilename;
 
 **[⬆ Back to services](#services)**
 
-#### 2. Generate Filename with Path
+#### PKW Label Hybrid: Generate Filename with Path
 
 If you want to include the output directory in the filename:
 
@@ -448,7 +478,7 @@ echo $pkwLabelFullFilename;
 
 **[⬆ Back to services](#services)**
 
-#### 3. Create PDF
+#### PKW Label Hybrid: Create PDF
 
 This example shows how to create the PDF and save it to the output directory:
 
@@ -482,7 +512,7 @@ PKWLabelHybrid::make('<your-api-key>')
 
 **[⬆ Back to services](#services)**
 
-#### 4. Create and Display PDF
+#### PKW Label Hybrid: Create and Display PDF
 
 This example creates the PDF and displays it directly in the browser:
 
@@ -517,7 +547,7 @@ PKWLabelHybrid::make('<your-api-key>')
 
 **[⬆ Back to services](#services)**
 
-#### 5. Display Already Created PDF
+#### PKW Label Hybrid: Display Already Created PDF
 
 If the PDF is already created, you can directly display it:
 
@@ -551,7 +581,7 @@ PKWLabelHybrid::make('<your-api-key>')
 
 **[⬆ Back to services](#services)**
 
-#### 6. Ensure PDF Exists and Print
+#### PKW Label Hybrid: Ensure PDF Exists and Print
 
 This function checks if the PDF already exists. If not, it generates the PDF and displays it:
 
@@ -597,7 +627,7 @@ Here are a few examples of how you can use the **PKWLabelHydrogen** class in you
 
 **[⬆ Back to services](#services)**
 
-#### 1. Generate Filename
+#### PKW Label Hydrogen: Generate Filename
 
 This example generates the filename for the PDF without creating the actual file:
 
@@ -620,7 +650,7 @@ echo $pkwLabelFilename;
 
 **[⬆ Back to services](#services)**
 
-#### 2. Generate Filename with Path
+#### PKW Label Hydrogen: Generate Filename with Path
 
 If you want to include the output directory in the filename:
 
@@ -644,7 +674,7 @@ echo $pkwLabelFullFilename;
 
 **[⬆ Back to services](#services)**
 
-#### 3. Create PDF
+#### PKW Label Hydrogen: Create PDF
 
 This example shows how to create the PDF and save it to the output directory:
 
@@ -666,7 +696,7 @@ PKWLabelHydrogen::make('<your-api-key>')
 
 **[⬆ Back to services](#services)**
 
-#### 4. Create and Display PDF
+#### PKW Label Hydrogen: Create and Display PDF
 
 This example creates the PDF and displays it directly in the browser:
 
@@ -689,7 +719,7 @@ PKWLabelHydrogen::make('<your-api-key>')
 
 **[⬆ Back to services](#services)**
 
-#### 5. Display Already Created PDF
+#### PKW Label Hydrogen: Display Already Created PDF
 
 If the PDF is already created, you can directly display it:
 
@@ -711,7 +741,7 @@ PKWLabelHydrogen::make('<your-api-key>')
 
 **[⬆ Back to services](#services)**
 
-#### 6. Ensure PDF Exists and Print
+#### PKW Label Hydrogen: Ensure PDF Exists and Print
 
 This function checks if the PDF already exists. If not, it generates the PDF and displays it:
 
@@ -745,7 +775,7 @@ Here are a few examples of how you can use the **PKWLabelOutdated** class in you
 
 **[⬆ Back to services](#services)**
 
-#### 1. Generate Filename
+#### PKW Label Outdated: Generate Filename
 
 This example generates the filename for the PDF without creating the actual file:
 
@@ -770,7 +800,7 @@ echo $pkwLabelFilename;
 
 **[⬆ Back to services](#services)**
 
-#### 2. Generate Filename with Path
+#### PKW Label Outdated: Generate Filename with Path
 
 If you want to include the output directory in the filename:
 
@@ -796,7 +826,7 @@ echo $pkwLabelFilenameAsPath;
 
 **[⬆ Back to services](#services)**
 
-#### 3. Create PDF
+#### PKW Label Outdated: Create PDF
 
 This example shows how to create the PDF and save it to the output directory:
 
@@ -820,7 +850,7 @@ PKWLabelOutdated::make('<your-api-key>')
 
 **[⬆ Back to services](#services)**
 
-#### 4. Create and Display PDF
+#### PKW Label Outdated: Create and Display PDF
 
 This example creates the PDF and displays it directly in the browser:
 
@@ -845,7 +875,7 @@ PKWLabelOutdated::make('<your-api-key>')
 
 **[⬆ Back to services](#services)**
 
-#### 5. Display Already Created PDF
+#### PKW Label Outdated: Display Already Created PDF
 
 If the PDF is already created, you can directly display it:
 
@@ -869,7 +899,7 @@ PKWLabelOutdated::make('<your-api-key>')
 
 **[⬆ Back to services](#services)**
 
-#### 6. Ensure PDF Exists and Print
+#### PKW Label Outdated: Ensure PDF Exists and Print
 
 This function checks if the PDF already exists. If not, it generates the PDF and displays it:
 
